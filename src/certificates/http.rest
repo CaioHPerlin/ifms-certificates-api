@@ -1,0 +1,34 @@
+###
+GET http://localhost:3000/certificates
+
+###
+POST http://localhost:3000/certificates
+Content-Type: application/json
+
+{
+  "title": "Certificate Title",
+  "description": "Certificate Description",
+  "hours": 40,
+  "startDate": "2023-01-01",
+  "endDate": "2023-12-31",
+  "institution": "Certificate Institution"
+}
+
+###
+GET http://localhost:3000/certificates/1
+
+###
+PATCH http://localhost:3000/certificates/1
+Content-Type: application/json
+
+{
+  "title": "Updated Certificate Title",
+  "description": "Updated Certificate Description",
+  "hours": 50,
+  "startDate": "2023-01-01",
+  "endDate": "2023-12-31",
+  "institution": "Updated Certificate Institution"
+}
+
+###
+DELETE http://localhost:3000/certificates/1
