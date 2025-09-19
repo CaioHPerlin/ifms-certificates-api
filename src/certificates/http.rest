@@ -1,4 +1,7 @@
 ###
+GET http://localhost:3000/logs
+
+###
 GET http://localhost:3000/certificates
 
 ###
