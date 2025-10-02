@@ -1,11 +1,17 @@
 ###
 GET http://localhost:3000/logs
 
-###
+### Find All 
 GET http://localhost:3000/certificates
+x-access-token: token123
 
-###
+### Find All - Should Throw
+GET http://localhost:3000/certificates
+x-access-token: token1234
+
+### Create
 POST http://localhost:3000/certificates
+x-access-token: token123
 Content-Type: application/json
 
 {
@@ -17,8 +23,11 @@ Content-Type: application/json
   "institution": "Certificate Institution"
 }
 
-###
+### Find 1
 GET http://localhost:3000/certificates/1
+
+### Should throw
+GET http://localhost:3000/certificates/what
 
 ###
 PATCH http://localhost:3000/certificates/1
